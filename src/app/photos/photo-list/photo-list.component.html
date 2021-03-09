@@ -1,0 +1,18 @@
+<h1 class="ml-4 mb-3"> {{ title }} </h1>
+
+<ap-search 
+    (onTyping) = "filter = $event">
+</ap-search>
+
+<ap-photos 
+    [photos] = "photos | FilterByDescription: filter">
+</ap-photos>
+
+<ap-load-button 
+    (click) = "load()" 
+    [hasMore] = "hasMore">
+</ap-load-button>
+
+
+
+
